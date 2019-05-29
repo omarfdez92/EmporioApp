@@ -5,15 +5,44 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-    <TextView
-            android:layout_width="wrap_content"
+        tools:context=".MainActivity" android:background="@color/colorBackground">
+    <ImageView
+            android:layout_width="294dp"
+            android:layout_height="240dp" app:srcCompat="@drawable/web_hi_res_512"
+            android:id="@+id/imageView"
+            android:scaleType="fitXY" android:layout_marginTop="60dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp" android:contentDescription="TODO"/>
+    <EditText
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailText"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" android:hint="@string/ingresa_tu_correo"
+            android:typeface="serif"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordText" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:hint="@string/ingresa_tu_contrase_a" android:typeface="serif"/>
+    <Button
+            android:text="@string/ingresar"
+            android:layout_width="202dp"
+            android:layout_height="44dp"
+            android:id="@+id/loginButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/passwordText" android:layout_marginBottom="150dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="16dp" android:textSize="18sp"
+            android:textStyle="bold" android:textColor="@color/colorAccent" android:background="@color/colorPrimary"/>
 </android.support.constraint.ConstraintLayout>

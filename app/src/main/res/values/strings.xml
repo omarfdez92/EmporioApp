@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Emporio App</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="ingresa_tu_contrase_a">Ingresa tu contraseña</string>
+    <string name="ingresa_tu_correo">Ingresa tu correo</string>
+    <string name="nurseBtn">ENFERMERO</string>
+    <string name="doctorBtn">DOCTOR</string>
+    <string name="nutriologistBtn">NUTRIOLOGO</string>
+    <string name="emporio_app">EMPORIO APP</string>
+    <string name="selectBtn">Seleccionar</string>
 </resources>
