@@ -14,14 +14,18 @@ class MainActivity : AppCompatActivity() {
         val email = emailText.text.toString()
         val password = passwordText.text.toString()
 
-        if(email.isNotEmpty() && password.isNotEmpty()){
+        if(email.isEmpty() && password.isEmpty()){
 
-            val mainChooseIntent = Intent(this, MainChoose::class.java)
-            startActivity(mainChooseIntent)
+            Toast.makeText(this, "POR FAVOR, LLENE TODOS LOS CAMPOS", Toast.LENGTH_SHORT).show()
+
+        }else if(email == "andrea@gmail.com" && password == "abc123"){
+
+            val intentMainChoose = Intent(this, MainChoose::class.java)
+            startActivity(intentMainChoose)
 
         }else{
 
-            Toast.makeText(this, "Por favor ingresa un correo y una contraseña", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "CORREO O CONTRASEÑA INCORRECTA", Toast.LENGTH_SHORT).show()
 
         }
 
