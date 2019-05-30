@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainChoose" android:background="@color/colorBackground">
+        tools:context=".Controller.MainChoose" android:background="@color/colorBackground">
 
     <TextView
             android:text="@string/emporio_app"
@@ -24,9 +24,10 @@
             android:background="@color/colorPrimary" android:textColor="@color/colorAccent" android:textSize="30sp"
             android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="150dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginRight="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginRight="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" android:onClick="docClicked"/>
 
     <Button
             android:text="@string/nurseBtn"
@@ -34,10 +35,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/nurseBtn" tools:ignore="MissingConstraints"
             android:background="@color/colorPrimary" android:textColor="@color/colorAccent" android:textSize="30sp"
-            android:textStyle="bold" android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/docBtn"
+            android:textStyle="bold"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/docBtn" android:onClick="nurseClicked"/>
 
     <Button
             android:text="@string/nutriologistBtn"
@@ -45,22 +48,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/nutriBtn" tools:ignore="MissingConstraints"
             android:background="@color/colorPrimary" android:textColor="@color/colorAccent" android:textSize="30sp"
-            android:textStyle="bold" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/nurseBtn" android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
-    <Button
-            android:text="@string/selectBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/selectBtn" android:textStyle="bold"
-            android:textColor="@color/colorAccent" android:textSize="20sp"
-            android:background="@color/colorPrimaryDark" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/nurseBtn" android:onClick="nutriClicked"/>
+    <TextView
+            android:text="QUE ES LO QUE NECESITA?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="128dp" android:textColor="@android:color/background_dark"
+            android:textSize="20sp"/>
 
 
 </android.support.constraint.ConstraintLayout>
